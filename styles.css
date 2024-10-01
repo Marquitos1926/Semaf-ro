@@ -1,0 +1,40 @@
+/* Esilização básica para centralizar o semaforo na pagina */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100hv; /* Ocupa toda a altura da viewport */
+    background-color: #f0f0f0; /* Fundo suave */
+    margin: 0; /* Remove margens padrão */
+}
+
+.semaforo {
+    background-color: black; /* Cor de fundo preta para o semáforo */
+    padding: 20px; /* Espaçamento */
+    border-radius: 10px; /* bordas arredondadas */
+    display: flex; /* Usado para organizar as luzes em coluna */
+    flex-direction: column; /* alinha os elementos verticalmento */
+    gap: 10px; /* espaço entre as luzes */
+}
+
+.luz{
+    width: 100px; /* Largura das luzes */
+    height: 100px; /* Altura das luzes */
+    background-color: #333; /* Cor inicial das luzes (apagadas) */
+    border-radius: 50%; /* Fprmato redondo*/
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s; /* Transição suave para cores */
+}
+
+#vermelho.active {
+    background-color: red; /* Cor vermenlha ativa */
+}
+
+#amarelo.active {
+    background-color: yellow;
+}
+
+#verde.active {
+    background-color: green;
+}
